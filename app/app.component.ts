@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './shared/modals/user';
 
 @Component({
 	selector: 'app',
@@ -27,14 +28,14 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-	loginmessage = "This is a login message!";
-	users = [
+	loginmessage: string = "This is a login message!";
+	users : User[]= [
 		{ id: 1, name: 'Apple'},
 		{ id: 2, name: 'Ball'},
 		{ id: 3, name: 'Cat'},
 	];
 
-	activeUser; // variable declaration which automatically adds to the class
+	activeUser: User; // variable declaration which automatically adds to the class
 
 	selectUser(user) {
 		this.activeUser = user;
